@@ -1,0 +1,12 @@
+{
+  "name": "my-simpleabdurashid-math-lib",
+  "version": "1.0.3",
+  "description": "A simple library for  performing basic math operations",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": ["math","addition"],
+  "author": "Abdurashid Gaybullayev",
+  "license": "ISC"
+}
