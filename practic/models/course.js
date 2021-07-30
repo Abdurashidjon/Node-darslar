@@ -1,6 +1,6 @@
 const Joi = require('joi');
 const mongoose = require('mongoose');
-const { category } = require('./category');
+const { category } = require('../models/category');
 
 const Course = mongoose.model('Courses', new mongoose.Schema({
     title: {
@@ -32,7 +32,7 @@ function validateCourse(course){
     const schema = Joi.object({
         title: Joi.string().min(3).max(30).required(),
         categoryId: Joi.string().required(),
-        trainer: Joi.string().required(),
+        trainer: Joi.string().min(5).max(30).required(),
         status: Joi.string().required(),
         tags: Joi.array().items(Joi.string())
     })

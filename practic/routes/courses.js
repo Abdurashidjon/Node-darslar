@@ -2,7 +2,9 @@ const express = require('express');
 const router = express.Router();
 const mongoose = require('mongoose');
 const { Course,validate } = require('../models/course');
-const Category = require('../models/category');
+// const Category = require('../models/category').Category;
+const { Category, validateCategory } = require('../models/category');
+
 
 router.get('/', async (req, res) => {
     const courses = await Course.find().sort('title');
